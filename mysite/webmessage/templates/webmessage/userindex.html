@@ -1,0 +1,9 @@
+{% if recent_user_list %}
+    <ul>
+    {% for user in recent_user_list %}
+        <li><a href="/webmessage/mailbox/{{ user.username }}/">{{ user.username }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No recent users.</p>
+{% endif %}
